@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:tumblrrr_app/utils/consts.dart';
+import 'package:tumblrrr_app/views/onboarding/auth/login_screen.dart';
 import 'package:tumblrrr_app/views/onboarding/onboarding_screen.dart';
 
 void main() {
@@ -26,9 +27,16 @@ class _TumblrrrAppState extends State<TumblrrrApp> {
         textTheme: TextTheme(
           bodyMedium: TextStyle(color: textColor),
           bodySmall: TextStyle(color: textColor),
-        )
+        ),
+        scaffoldBackgroundColor: Colors.white
       ),
-      home: OnboardingScreen(),
+      // initialRoute: untuk mendefinisikan kelas apa yang akan tampil pertama kali
+      // saat aplikasi dijalankan
+      initialRoute: '/login',
+      routes: {
+        '/onboarding': (context) => OnboardingScreen(),
+        '/login': (context) => LoginScreen(),
+      },
     );
   }
 }
