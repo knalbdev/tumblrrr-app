@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
 import 'package:tumblrrr_app/utils/consts.dart';
+import 'package:tumblrrr_app/views/home/catalogue_screen.dart';
 import 'package:tumblrrr_app/views/onboarding/auth/login_screen.dart';
+import 'package:tumblrrr_app/views/onboarding/auth/register_screen.dart';
 import 'package:tumblrrr_app/views/onboarding/onboarding_screen.dart';
 
 void main() {
@@ -36,6 +37,8 @@ class _TumblrrrAppState extends State<TumblrrrApp> {
       routes: {
         '/onboarding': (context) => OnboardingScreen(),
         '/login': (context) => LoginScreen(),
+        '/register': (context) => RegisterScreen(),
+        '/catalogue': (context) => CatalogueScreen()
       },
     );
   }
